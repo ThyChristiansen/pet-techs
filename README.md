@@ -92,8 +92,8 @@ If you would like to name your database something else, you will need to change 
   
   You will need to sign up an AWS account at https://aws.amazon.com/ for the upload picture feature. When this account has been started, it will still require you to add payment information prior to being able to create an S3 Bucket to store uploaded files. Once you have added payment information to your AWS account, you can follow the beginning of this tutorial for [how to set up an S3 Bucket on your account](https://medium.com/@khelif96/uploading-files-from-a-react-app-to-aws-s3-the-right-way-541dd6be689/). Disregard anything after “Back End” — this has been provided for you already. Then be sure to record the AWSAccessKeyId AND the AWSSecretKey.  This information should be held securely as it is what will allow your app to access your AWS S3 storage bucket.  These keys will look like:
   
-  - IAM_USER_KEY: AKIAIOSFODNN7EXAMPLE
-  - IAM_USER_SECRET: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+  - Access key ID example: AKIAIOSFODNN7EXAMPLE
+  - Secret key example: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
   
   You will also need to set up and update permissions on your S3 Bucket.  From the same place you accessed your CORS settings in the tutorial above, you will need to select BLOCK PUBLIC ACCESS and turn off any settings that are blocking public access.  No boxes on this page should be checked with how your app is currently set up.
 
