@@ -89,6 +89,12 @@ If you would like to name your database something else, you will need to change 
   While you're in your new `.env` file, take the time to replace `superDuperSecret` with some long random string like `25POUbVtx6RKVNWszd9ERB9Bb6` to keep your application secure. Here's a site that can help you: [https://passwordsgenerator.net/](https://passwordsgenerator.net/). If you don't do this step, create a secret with less than eight characters, or leave it as `superDuperSecret`, you will get a warning.
 
   You will need to sign up for SendGrid and obtain a unique API Key. To do so, please go to https://sendgrid.com/. Scroll down and click on "SendGrid API" and follow the instructions. Add your API key in your .env file.
+  
+  To manage your AWS settings online, access the AWS Management Console in the My Account tab on https://aws.amazon.com/. When this account has been started, it will still require you to add payment information prior to being able to create an S3 Bucket to store uploaded files. Once you have added payment information to your AWS account, you can follow the beginning of this tutorial for [https://medium.com/@khelif96/uploading-files-from-a-react-app-to-aws-s3-the-right-way-541dd6be689/](how to set up an S3 Bucket on your account).  Disregard anything after “Back End” — this has been provided for you already. Then be sure to record the AWSAccessKeyId AND the AWSSecretKey.  This information should be held securely as it is what will allow your app to access your AWS S3 storage bucket.  These keys will look like:
+IAM_USER_KEY: AKIAIOSFODNN7EXAMPLE
+IAM_USER_SECRET: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+  You will also need to set up and update permissions on your S3 Bucket.  From the same place you accessed your CORS settings in the tutorial above, you will need to select BLOCK PUBLIC ACCESS and turn off any settings that are blocking public access.  No boxes on this page should be checked with how your app is currently set up.
+
 
 * Start postgres if not running already by using `brew services start postgresql`
 * Run `npm run server`
